@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --black: #0F0F0F;
+    --white: #FFFFFF;
+    --grey: #3d3d3d;
+    --dark-grey:#222222;
+    --light-grey:#bdb8b8;
+    --blue: #3ea6ff;
+    --dark-blue: #263850;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--black);
+}
+h1,h2,h3,h4,h5,h6,span,p{
+    color:var(--white);
+}
+header{
+    height: 3rem;
+    display: flex;
+    padding: 5px 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+header > .logo, header > .logo > img{
+    height: 3rem;
+}
+header > .logo > span{
+    color:white;
+    padding: 0.5rem;
+}
+header > .logo > span:hover{
+    background-color: var(--grey);
+    border-radius: 50%;
+}
+header > .logo{
+    display: inline-flex;
+    align-items: center;
+    gap:0.5rem;
+    cursor: pointer;
+}
+.button{
+    background-color: var(--black);
+    border:1px solid var(--grey);
+    color: var(--blue);
+    padding: 5px 1rem;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+.button>span{
+    color: var(--blue);
+}
+.button:hover{
+    background-color: var(--dark-blue);
+}
+.icon-color{
+    color:var(--white);
+    cursor: pointer;
+}
+.search-input > input{
+    background-color: var(--black);
+    outline: none;
+    border: none;
+    color: white;
+}
+.search-input > button{
+    background-color: var(--dark-grey);
+    border: none; 
+    color: white;
+    border-radius: 0 25px 25px 0;
+    padding: 5px 1rem;
+    border-left: 1px solid var(--grey);
+    cursor: pointer;
+}
+.search-input{
+    border:1px solid var(--grey);
+    border-radius: 25px;
+    padding-left:1rem;
+    display: inline-flex;
+    align-items: center;
+}
+.header-middle{
+    display: inline-flex;
+    align-items: center;
+}
+.header-middle>span{
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--grey);
+    margin-left: 0.50rem;
+}
+main{
+    display: flex;
+    gap: 0.5rem;
+}
+main nav{
+    width: 16%;
+    /* border: 1px solid red; */
+    max-height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: stretch;
+    font-size: 0.9rem;
+    font-weight:500;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+main nav::-webkit-scrollbar {
+    width: 8px;
+    visibility: hidden;
+}
+main nav:hover::-webkit-scrollbar{
+    width: 8px;
+    visibility: visible;
+}
+main nav:hover::-webkit-scrollbar-thumb {
+    background-color:var(--grey); /* Scrollbar color */
+    border-radius: 5px; /* Rounded corners */
+}
+main nav .nav-items{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+main nav .nav-items:hover{
+    background-color: var(--dark-grey);
+}
+.active{
+    background-color: var(--dark-grey);
+}
+.pointer{
+    cursor: pointer;
+}
+hr{
+    margin-block: 0.6rem;
+    width: 100%;
+    border-bottom: 0.7px;
+}
+.nav-login-message
+{
+    padding: 0.25rem 1rem;
+}
+.nav-login-message > button{
+    margin-block: 0.5rem;
+}
+.youtube_icon{
+    color: red;
+}
+section{
+    width: calc(100% - 18%);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.suggestion{
+    width: 98%;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap:nowrap;
+    padding: 0.8rem 2rem;
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    background-color: var(--black);
+    
+}
+.suggestion > span{
+    color: var(--white);
+    background-color: var(--dark-grey);
+    border-radius: 10px;
+    padding: 0.25rem 1rem;
+    transition: background-color 0.5s;
+    flex-shrink: 0;
+    margin-block:3px ;
+    font-size: 0.9rem;
+}
+.suggestion span:not(.exclude):hover{
+    background-color: var(--grey);
+}
+.suggestion > .active{
+    color: var(--grey);
+    background-color: var(--white);
+}
+main .suggestion::-webkit-scrollbar {
+    width: 1px;
+    height: 3px;
+    visibility: hidden;
+}
+main .suggestion:hover::-webkit-scrollbar{
+    width: 1px;
+    visibility: visible;
+}
+main .suggestion:hover::-webkit-scrollbar-thumb {
+    background-color:var(--grey); /* Scrollbar color */
+    border-radius: 5px; /* Rounded corners */
+}
+.video-list-item{
+    width: 31.5%;
+}
+.video-list-container{
+    width: 100%;
+    max-height: calc(100vh - 7rem);
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 1.5rem;
+    padding: 2rem;
+    /* overflow: auto; */
+}
+.video-thumbnail{
+    width: 100%;
+    height: 30vh;
+    border-radius: 0.5rem;
+}
+.video-meta{
+    display: flex;
+    gap:1rem;
+}
+.channel-logo{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+.video-title{
+    font-weight: 600;
+}
+.channel-name{
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    color: var(--light-grey);
+    transition: color 0.3s;
+}
+.channel-name:hover{
+    color: var(--white);
+}
+.video-views , .video-upload-date{
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    color: var(--light-grey);
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+.about a, span{
+    text-decoration: none;
+    color: var(--light-grey);
+    font-size: 13px;
+    margin-right: 3px;
+}
